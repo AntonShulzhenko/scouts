@@ -20,7 +20,7 @@ const imagemin     = require('gulp-imagemin');
 // const wrap         = require('gulp-wrap'); Handlebars
 // const declare      = require('gulp-declare'); Handlebars
 // const merge        = require('merge-stream'); Handlebars
-// const min          = require('gulp-clean-css'); Minify css
+const min          = require('gulp-clean-css');
 // const uglify       = require('gulp-uglify'); Minify js
 
 const errorHandler = (title) => plumber(
@@ -61,6 +61,8 @@ gulp.task('styles', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest('public/css'))
+    .pipe(min())
     .pipe(gulp.dest('public/css'));
 });
 
@@ -175,15 +177,7 @@ gulp.task('static:images', function() {
 });
 
 
-gulp.task('static:json', () => {
-  return gulp
-    .src('src/js/*.json')
-    .pipe(errorHandler())
-    .pipe(gulp.dest('public/js'));
-});
-
-
-gulp.task('static', ['static:html', 'static:fonts', 'static:images', 'static:json'], () => {
+gulp.task('static', ['static:html', 'static:fonts', 'static:images'], () => {
   return gulp
     .src([
       'src/*.png', 'src/*.svg', 'src/*.json', 'src/*.xml'

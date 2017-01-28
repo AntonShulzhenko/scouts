@@ -1,8 +1,9 @@
 // Typography
 $heading-font: #{'Guerilla'};
 $content-font: #{'Rubik, Roboto, Helvetica, sans-serif'};
-$base-fs: 14px;
-$base-lh: 1.5;
+$fa          : #{'FontAwesome'};
+$base-fs     : 14px;
+$base-lh     : 1.5;
 
 // Colors
 $link:        #33afe3;
@@ -13,3 +14,7 @@ $yel:         #f9c802;
 $bege:        #fae6c5;
 $white:       #fff;
 $black:       #000;
+
+// Transition
+$td: 250ms;
+$tf: ease-in-out;

@@ -15,6 +15,7 @@ const del          = require('del');
 const server       = require('browser-sync').create();
 const imagemin     = require('gulp-imagemin');
 const min          = require('gulp-clean-css');
+const jade         = require('gulp-jade');
 
 // const concat       = require('gulp-concat'); Handlebars
 // const handlebars   = require('gulp-handlebars'); Handlebars
@@ -50,6 +51,16 @@ gulp.task('server', () => {
     open: gutil.env.open !== false,
     ghostMode: false
   });
+});
+
+
+gulp.task('jade', () => {
+  gulp.src('./src/*.jade')
+  .pipe(errorHandler())
+  .pipe(jade({
+    pretty: true
+  }))
+  .pipe(gulp.dest('./public'));
 });
 
 
@@ -199,6 +210,7 @@ gulp.task('clean', () => {
 gulp.task('build', (cb) => {
   sequence(
     'clean',
+    'jade',
     'styles',
     'scripts',
     'lint',
@@ -214,7 +226,7 @@ gulp.task('watch', () => {
   gulp.watch(['src/js/**/*.js', '!src/js/vendor.js'], ['scripts:main', 'lint']);
   gulp.watch('!src/js/vendor.js', ['scripts:vendor']);
   gulp.watch('src/index.html', ['static:html']);
-  // gulp.watch('src/templates/**/*.hbs', ['templates']);
+  gulp.watch('src/**/*.jade', ['jade']);
 });
 
 

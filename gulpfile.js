@@ -14,13 +14,13 @@ const path         = require('path');
 const del          = require('del');
 const server       = require('browser-sync').create();
 const imagemin     = require('gulp-imagemin');
+const min          = require('gulp-clean-css');
 
 // const concat       = require('gulp-concat'); Handlebars
 // const handlebars   = require('gulp-handlebars'); Handlebars
 // const wrap         = require('gulp-wrap'); Handlebars
 // const declare      = require('gulp-declare'); Handlebars
 // const merge        = require('merge-stream'); Handlebars
-const min          = require('gulp-clean-css');
 // const uglify       = require('gulp-uglify'); Minify js
 
 const errorHandler = (title) => plumber(
@@ -168,8 +168,10 @@ gulp.task('static:fonts', () => {
 });
 
 
-gulp.task('static:images', function() {
-  return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+gulp.task('static:images', () => {
+  return gulp
+    .src('src/img/**/*.*')
+    .pipe(errorHandler())
     .pipe(cache(imagemin({
       interlaced: true
     })))

@@ -1,5 +1,12 @@
-body {
-  background-color: red;
-}
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+// Remove this property to enable responsive
+.container { width: 970px !important; }
+
+@import "base/vars";
+@import "base/fonts";
+@import "base/base";
 
 @import "components/nav";

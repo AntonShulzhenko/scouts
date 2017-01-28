@@ -1,0 +1,44 @@
+html {
+  min-width: 320px;
+  overflow-x: hidden;
+  width: 100%;
+  font-size: $base-fs;
+}
+
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  height: 2000px;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background: #3d297e;
+  background: linear-gradient(to bottom,  #3d297e 0%,#34236a 100%);
+  font-family: $content-font;
+  font-size: $base-fs;
+  line-height: $base-lh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 400;
+  color: $black;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 2px 65px rgba($black, 0.3);
+  &_main {
+    max-width: 1170px;
+  }
+}

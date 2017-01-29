@@ -1,15 +1,41 @@
 doctype
 html
   include templates/head
-
   body
     .wrap
       include templates/header
-      
       include templates/banner
       
       .content.content_main
-        .container
-          h1 Hello World!!!
+        section.section.section_news
+          .container-fluid
+            h2 Новости
+            
+            .row
+              .col-xs-4
+                figure.news__figure
+                  img(src="img/news-img-1.png", alt="")
+                  
+                a.news__link(href="#") Встреча участников проекта "Джерело 2012"
+                
+                p.news__excerpt Дата: 03.07.2012 г. Время: с 18:30 до 19:30 Место встречи: по адресу пр. Кирова, д.14 (в помещении ДЮЦ "Юнацтво")...
+                
+              .col-xs-4
+                figure.news__figure
+                  img(src="img/news-img-1.png", alt="")
+                  
+                a.news__link(href="#") Информация для всех членов организации
+                
+                p.news__excerpt Областная общественная детская организация «Ассоциация Днепровских скаутов «СКИФ» информирует всех заинтересованных лиц и активных членов организации о текущих организационных мероприятиях в связи с началом учебного...
+                
+              .col-xs-4
+                figure.news__figure
+                  img(src="img/news-img-1.png", alt="")
+                  
+                a.news__link(href="#") Международный скаутський лагер
+                
+                p.news__excerpt Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии «Kvaernmoen» ...
+                
+            a.news__all(href="#") Все новости
 
     include templates/footer

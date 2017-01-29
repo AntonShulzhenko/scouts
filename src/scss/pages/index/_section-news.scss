@@ -1,0 +1,37 @@
+.section {
+  &_news {
+    padding-top: 210px;
+    padding-bottom: 65px;
+    background-color: $white;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      background: {
+        repeat: no-repeat;
+      }
+    }
+    &::before {
+      top: 0;
+      height: 205px;
+      background: {
+        image: url(../img/news-main-top.png);
+        position: center top;
+      }
+    }
+    &::after {
+      height: 310px;
+      bottom: 0;
+      background: {
+        image: url(../img/news-main-bottom.png);
+        position: center bottom;
+      }
+    }
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+}

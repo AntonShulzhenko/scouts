@@ -8,7 +8,6 @@ html {
 body {
   max-width: 1920px;
   min-width: 320px;
-  height: 2000px;
   overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -31,6 +30,20 @@ h1, h2, h3, h4, h5, h6 {
   color: $black;
 }
 
+h2 {
+  font-size: 48px;
+}
+
+a {
+  color: $link;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $link;
+  }
+}
+
 .wrap {
   width: 100%;
   margin-left: auto;
@@ -44,8 +57,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   background-color: $white;
   border-radius: 8px;
+  overflow: hidden;
   @include box-shadow();
   &_main {
     max-width: 1170px;
+    margin-top: -120px;
+  }
+}
+
+.section {
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  & > * {
+    position: relative;
+    z-index: 2;
   }
 }

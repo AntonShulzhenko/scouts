@@ -5,10 +5,15 @@
 // Remove this property to enable responsive
 .container { width: 970px !important; }
 
+@import "utils/mixins";
+
 @import "base/vars";
 @import "base/fonts";
 @import "base/base";
 
+@import "libs/owl.carousel";
+
 @import "components/header";
 @import "components/logo";
 @import "components/nav";
+@import "components/banner";

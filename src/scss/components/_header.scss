@@ -2,5 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 25px 0;
+  max-width: 1170px;
+  margin: 30px auto 0;
+  &__contacts {
+    max-width: 210px;
+    margin-top: 10px;
+  }
+  &__address {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $white;
+    margin-bottom: 20px;
+  }
+  &__email {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $bege;
+    border-bottom: 1px dashed $bege;
+    transition: all $td $tf;
+    &:hover,
+    &:focus {
+      color: $bege;
+      text-decoration: none;
+      border-color: transparent;
+    }
+  }
 }

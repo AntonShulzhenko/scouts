@@ -1,6 +1,7 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+@import "libs/owl.carousel";
 
 // Remove this property to enable responsive
 .container { width: 970px !important; }
@@ -10,8 +11,7 @@
 @import "base/vars";
 @import "base/fonts";
 @import "base/base";
-
-@import "libs/owl.carousel";
+@import "utils/utils";
 
 @import "components/header";
 @import "components/logo";
@@ -22,6 +22,9 @@
 @import "components/button";
 @import "components/link";
 @import "components/excerpt";
+@import "components/lists";
+@import "components/liders";
 
 @import "pages/index/section-news";
 @import "pages/index/section-how";
+@import "pages/index/section-liders";

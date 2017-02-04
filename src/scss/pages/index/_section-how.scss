@@ -1,6 +1,19 @@
 .section {
   &_how-to {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 55px;
+    color: $white;
+    h2 {
+      color: $white;
+    }
+    .sub-heading {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 25px;
+      color: $white
+    }
   }
 }

@@ -7,6 +7,7 @@ html
       include templates/banner
       
       .content.content_main
+        //- =====
         section.section.section_news
           .container-fluid
             h2 Новости
@@ -44,6 +45,7 @@ html
                 
             a.button.button_yellow(href="#") Все новости
         
+        //- =====
         section.section.section_blue.section_how-to
           .container-fluid
             .row
@@ -51,19 +53,46 @@ html
                 h2 Как стать скаутом
                 p.sub-heading Для того чтобы стать скаутом, необходимо:
                 
-                - var oList = ['найти нашу локацию скаутов;', 'получить первичные знания про скаутинг: история скаутинга, почему такие законы, какая символика;', 'пройти скаутское испытание', 'пройти торжественное посвящение в скауты'];
+                - var oList = [{'content':'найти нашу локацию скаутов;', 'class':'margin-left-40'}, {'content':'получить первичные знания про скаутинг: история скаутинга, почему такие законы, какая символика;', 'class':''}, {'content':'пройти скаутское испытание', 'class':'margin-left-100'}, {'content':'пройти торжественное посвящение в скауты', 'class':'margin-left-190'}];
                 
-                ol.o-list
+                ol.list.list-ordered.list-ordered_deco.margin-top-90
                   each li in oList
-                    li #{li}
+                    li(class="#{li.class}") #{li.content}
                     
-              .col-sm-6
-                p Скаутинг – это не занятие английским по вторникам, не футбол и не музыкальная школа. Скаутинг — это образ жизни.
+              .col-sm-6.text-right
+                p.margin-top-40.margin-bottom-60.text-left Скаутинг – это не занятие английским по вторникам, не футбол и не музыкальная школа. Скаутинг — это образ жизни.
                 
-                p Ни одного дня без доброго дела, честность, помощь близким и родным – это вам не изучение нотной грамоты  Быть скаутом, значит, быть ответственным и самостоятельным, готовым ко взрослой жизни; уметь работать в команде.
+                p.margin-bottom-30.text-left.margin-left-60 Ни одного дня без доброго дела, честность, помощь близким и родным – это вам не изучение нотной грамоты  Быть скаутом, значит, быть ответственным и самостоятельным, готовым ко взрослой жизни; уметь работать в команде.
                 
-                p.text-bold Ведь скаут однажды - скаут навсегда.
+                p.text-bold.margin-bottom-50.text-left.margin-left-60 Ведь скаут однажды - скаут навсегда.
                 
-                a.button.button_yellow Подробнее
+                a.button.button_yellow.margin-right-30(href="") Подробнее
                 
+        //- =====
+        section.section.section_yellow.section_leaders-main
+          .container-fluid
+            h2 Наши лидеры
+            
+            .leaders
+              .leaders__item
+                figure.figure.figure_rect.leaders__figure
+                  img(src="img/lid-1.jpg", alt="")
+                  
+                .leaders__content
+                  p.leaders__name Константин Константиновский
+                  p.leaders__descr С нами уже 5 лет
+                  p.leaders__descr Главный лидер в Днепре
+                  
+              .leaders__item
+                figure.figure.figure_rect.leaders__figure
+                  img(src="img/lid-2.jpg", alt="")
+                  
+                .leaders__content
+                  p.leaders__name Константин Константиновский
+                  p.leaders__descr С нами уже 5 лет
+                  p.leaders__descr Главный лидер в Днепре
+            
+            a.button.button_white.margin-top-70.margin-auto(href="") Смотреть всех
+        
+        
     include templates/footer

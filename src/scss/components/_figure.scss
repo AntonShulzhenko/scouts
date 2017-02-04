@@ -21,4 +21,13 @@
     left: 0;
     top: 0;
   }
+  &_rect {
+    padding-right: 16px;
+    &::before {
+      width: calc(100% - 10px);
+      background-color: $sky;
+      transform: translate(4px, 8px) rotateZ(2deg);
+      z-index: -1;
+    }
+  }
 }

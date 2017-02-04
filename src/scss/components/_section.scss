@@ -8,7 +8,6 @@
     z-index: 2;
   }
   &_blue {
-    background-color: $sky;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-top: -8px;
@@ -16,6 +15,32 @@
       image: url(../img/section-blue-bg.png);
       repeat: no-repeat;
       position: right top;
+      color: $sky;
+    }
+  }
+  &_yellow {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: -8px;
+    background: {
+      image: url(../img/section-yellow-bg.png);
+      repeat: no-repeat;
+      position: left bottom;
+      color: $yel;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: {
+        image: url(../img/mountains-bg.png);
+        repeat: no-repeat;
+        position: 67% bottom;
+      }
     }
   }
 }

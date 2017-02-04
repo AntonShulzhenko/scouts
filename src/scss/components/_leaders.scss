@@ -1,0 +1,33 @@
+.leaders {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  p {
+    font-weight: 700;
+    color: $white;
+  }
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    max-width: 475px;
+  }
+  &__name {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+  &__descr {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+  &__figure {
+    min-width: 222px;
+  }
+  &__content {
+    margin-left: -25px;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,49 @@
+.list {
+  padding: 0;
+  list-style: none;
+  &-ordered {
+    counter-reset: point;
+    li {
+      position: relative;
+      &::before {
+        content: counter(point, decimal);
+        counter-increment: point 1;
+      }
+    }
+    &_deco {
+      li {
+        font-size: 24px;
+        line-height: 25px;
+        color: $white;
+        padding-top: 10px;
+        padding-left: 35px;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before,
+        &::after {
+          position: absolute;
+        }
+        &::before {
+          font-family: $heading-font;
+          font-size: 48px;
+          color: $yel;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $blue;
+          left: 2px;
+          top: 2px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

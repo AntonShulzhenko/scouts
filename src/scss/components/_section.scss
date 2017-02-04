@@ -1,0 +1,21 @@
+.section {
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  background-color: $white;
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+  &_blue {
+    background-color: $sky;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: -8px;
+    background: {
+      image: url(../img/section-blue-bg.png);
+      repeat: no-repeat;
+      position: right top;
+    }
+  }
+}

@@ -11,6 +11,7 @@
     margin: 0 auto;
     overflow: hidden;
     @include box-shadow();
+    border-radius: 8px;
     img {
       border-radius: 8px;
     }

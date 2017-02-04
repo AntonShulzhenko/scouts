@@ -2,7 +2,6 @@
   &_news {
     padding-top: 210px;
     padding-bottom: 65px;
-    background-color: $white;
     &::before,
     &::after {
       content: "";
@@ -32,6 +31,13 @@
     }
     h2 {
       margin-bottom: 50px;
+    }
+    .link {
+      margin-bottom: 30px;
+    }
+    .button {
+      display: block;
+      margin: 45px auto 0;
     }
   }
 }

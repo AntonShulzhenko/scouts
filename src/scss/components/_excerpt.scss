@@ -1,0 +1,21 @@
+.excerpt {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 0;
+  a {
+    margin-left: 5px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      i {
+        transform: translateX(5px);
+      }
+    }
+    i {
+      display: inline-block;
+      margin-left: 5px;
+      @include defaultTrans();
+    }
+  }
+}

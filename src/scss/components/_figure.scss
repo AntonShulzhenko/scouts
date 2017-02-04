@@ -1,0 +1,24 @@
+.figure {
+  position: relative;
+  overflow: hidden;
+  &_cir {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 8px 8px 0 0 $yel;
+    &::before {
+      border-radius: 50%;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#292f56, 0.54);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

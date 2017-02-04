@@ -1,0 +1,18 @@
+.section {
+  &_parents-main {
+    padding: 90px 60px;
+    background: {
+      image: url(../img/mountains-grey-bg.png);
+      repeat: no-repeat;
+      position: right bottom;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 36px;
+    }
+    .button {
+      display: block;
+    }
+  }
+}

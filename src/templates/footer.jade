@@ -1,2 +1,25 @@
+footer.footer
+  .footer__copy
+    p © 2016 АДС СКИФ - Скауты в Украине. Все права защищены.
+    img(src="img/fire.png", alt="")
+    
+  .footer__menu
+    - var nav = ['О нас', 'Наши лидеры', 'Фотогалерея', 'Как стать скаутом', 'Библиотека', 'Контакты'];
+
+    .header
+      a(href="#" class="header__logo logo")
+        img.logo__img(src="img/logo.png" alt="Ассоциация днепровских скаутов «СКИФ»")
+        span.logo__text Ассоциация днепровских скаутов «СКИФ»
+
+      nav.nav
+        ul.nav__list
+          each item in nav
+            li.nav__item
+              a(href="#" class="nav__link") #{item}
+              
+      .header__contacts
+        p.header__address Украина, г. Днепропетровск, ул. Артема 1й
+        a.header__email(href="mailto:adsskif@mail.ru") adsskif@mail.ru
+
 script(src="/js/vendor.js")
 script(src="/js/main.js")

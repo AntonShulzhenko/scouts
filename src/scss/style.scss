@@ -14,6 +14,7 @@
 @import "utils/utils";
 
 @import "components/header";
+@import "components/footer";
 @import "components/logo";
 @import "components/nav";
 @import "components/banner";
@@ -24,7 +25,10 @@
 @import "components/excerpt";
 @import "components/lists";
 @import "components/leaders";
+@import "components/sponsors";
 
 @import "pages/index/section-news";
 @import "pages/index/section-how";
 @import "pages/index/section-liders";
+@import "pages/index/section-parents";
+@import "pages/index/section-sponsors";

@@ -1,0 +1,18 @@
+.footer {
+  padding-top: 85px;
+  padding-bottom: 30px;
+  background: {
+    image: url(../img/footer-bg.png);
+    repeat: no-repeat;
+    position: right bottom -35px;
+  }
+  &__copy {
+    text-align: center;
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+}

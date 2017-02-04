@@ -1,0 +1,11 @@
+.sponsors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item {
+    width: calc(100% / 5 - 35px);
+    img {
+      margin: 0 auto;
+    }
+  }
+}

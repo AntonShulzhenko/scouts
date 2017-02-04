@@ -32,3 +32,18 @@
     margin-right: auto;
   }
 }
+
+.d {
+  &-block {
+    display: block;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+  &-inline {
+    display: inline;
+  }
+  &-flex {
+    display: flex;
+  }
+}

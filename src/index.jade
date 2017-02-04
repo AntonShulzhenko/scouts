@@ -92,7 +92,32 @@ html
                   p.leaders__descr С нами уже 5 лет
                   p.leaders__descr Главный лидер в Днепре
             
-            a.button.button_white.margin-top-70.margin-auto(href="") Смотреть всех
+            a.button.button_white.margin-top-70.margin-auto(href="#") Смотреть всех
         
+        //- =====
+        section.section.section_parents-main
+          .container-fluid
+            h2.margin-bottom-60 Родителям
+            
+            .row
+              .col-xs-6
+                p Родители часто задаются вопросом «Кто такие скауты?». Скаутинг – это система всестороннего развития детей, где их учат разводить костры, строить шалаши, выживать в дикой природе, фильтровать воду, ориентироваться на местности по звездам, по компасу,  по солнцу, по мху, – по чему угодно. Кроме того, помимо туризма и выживания
+                
+              .col-xs-6
+                p Существует скаутский закон, который включает 10 пунктов: скаут честный, скаут вежливый, скаут друг всем и брат каждому скауту, скаут подчиняется своему скаут-лидеру и слушается родителей, скаут экономен и бережлив, скаут друг природы и так далее. Также скаутинг включает патриотическое воспитание
+                
+            a.button.button_yellow.margin-top-20.margin-auto.d-block(href="#") Узнать больше
+            
+        //- =====
+        section.section.section_sponsors
+          .container-fluid
+            h2.margin-bottom-60 Наши спонсоры
+            
+            -var sponsors = ['s-1.jpg', 's-2.jpg', 's-3.jpg', 's-4.jpg', 's-2.jpg'];
+            .sponsors
+              each item in sponsors
+                .sponsors__item
+                  img.img-responsive(src="img/#{item}", alt="")
+                  
         
     include templates/footer

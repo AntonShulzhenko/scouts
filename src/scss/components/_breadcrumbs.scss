@@ -1,0 +1,21 @@
+.breadcrumbs {
+  &__item {
+    color: $white;
+    font-size: 16px;
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: none;
+    }
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        display: inline-block;
+        margin: 0 4px;
+      }
+    }
+    &:last-child {
+      pointer-events: none;
+    }
+  }
+}

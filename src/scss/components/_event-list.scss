@@ -1,0 +1,32 @@
+.event-list {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  padding: 80px 0;
+  &:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  &__item {
+    max-width: 768px;
+  }
+  &__link {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  &__data {
+    margin: 20px auto 30px;
+  }
+  &__p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  &__img {
+    .figure {
+      margin-right: 30px;
+      &::before {
+        background-color: rgba($blue, 0.7);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__p {
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 0;
+    &:first-child {
+      margin-right: 30px;
+    }
+    &_calendar {
+      padding-left: 20px;
+      &::before {
+        content: "\f073";
+        font-family: $fa;
+        color: $sky;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

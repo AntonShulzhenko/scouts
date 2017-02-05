@@ -13,6 +13,7 @@
 @import "base/base";
 @import "utils/utils";
 
+@import "components/content";
 @import "components/header";
 @import "components/footer";
 @import "components/logo";
@@ -26,6 +27,9 @@
 @import "components/lists";
 @import "components/leaders";
 @import "components/sponsors";
+@import "components/breadcrumbs";
+@import "components/data";
+@import "components/event-list";
 
 @import "pages/index/section-news";
 @import "pages/index/section-how";

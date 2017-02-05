@@ -51,7 +51,7 @@ html
                     
                 .col-xs-8
                   .event-list__item
-                    a.event-list__link(href="#") Название события
+                    a.event-list__link(href="#") Второе событие
                     
                     .data.event-list__data
                       .data__item
@@ -73,7 +73,7 @@ html
                     
                 .col-xs-8
                   .event-list__item
-                    a.event-list__link(href="#") Название события
+                    a.event-list__link(href="#") Еще одно событие, которое может быть с длинным названием в несколько строчек
                     
                     .data.event-list__data
                       .data__item
@@ -95,7 +95,7 @@ html
                     
                 .col-xs-8
                   .event-list__item
-                    a.event-list__link(href="#") Название события
+                    a.event-list__link(href="#") Четвертое мероприятие
                     
                     .data.event-list__data
                       .data__item
@@ -108,6 +108,31 @@ html
                         
                     p.event-list__p Дорогие наши старшие скауты, роверы и друзья организации - Вот и настало время, долгожданного традиционного лагеря нашей организации - «Джерело». Приглашаем всех желающих - весь старший актив организации, просто небезразличных граждан нашего славного города, и конечно же уважаемых и не менее активным родителей наших волчат и скаутов, принять участие в программе проекта - по подготовке и обустройству территории места проведения  традиционного 16-го скаутского лагеря «Джерело 2010».
                     
+        .pagination
+          .pagination__top
+            .pagination__pages
+              span.current 2
+              span /
+              span.amount 4
+              span.page Страница
+              
+          .pagination__bottom
+            a.pagination__link(href="#") Первая
+            a.pagination__link(href="#") Предыдущая
+            
+            ul.pagination__list
+              li
+                a(href="#") 1
+              li
+                a(href="#") 2
+              li
+                a.active(href="#") 3
+              li
+                a(href="#") 4
+            
+            a.pagination__link(href="#") Следующая
+            a.pagination__link(href="#") Последняя
+            
       include templates/banner
       
     include templates/footer

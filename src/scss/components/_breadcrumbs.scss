@@ -1,10 +1,10 @@
 .breadcrumbs {
   &__item {
-    color: $white;
+    color: $black;
     font-size: 16px;
     &:hover,
     &:focus {
-      color: $white;
+      color: $black;
       text-decoration: none;
     }
     &:not(:last-child) {

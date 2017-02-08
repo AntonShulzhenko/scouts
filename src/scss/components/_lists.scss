@@ -1,13 +1,30 @@
 .list {
   padding: 0;
   list-style: none;
+  li {
+    position: relative;
+  }
   &-ordered {
     counter-reset: point;
     li {
-      position: relative;
       &::before {
         content: counter(point, decimal);
         counter-increment: point 1;
+      }
+    }
+    &_dot {
+      li {
+        font-size: 18px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          color: $sky;
+          content: counter(point , decimal) ".";
+          margin-right: 5px;
+        }
       }
     }
     &_deco {
@@ -43,6 +60,19 @@
           top: 2px;
           z-index: -1;
         }
+      }
+    }
+  }
+  &-unordered {
+    li {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      &::before {
+        content: "\f058";
+        font-family: $fa;
+        color: $sky;
+        margin-right: 20px;
       }
     }
   }

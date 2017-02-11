@@ -5,6 +5,9 @@
   &-24 {
     font-size: 24px;
   }
+  &-30 {
+    font-size: 30px;
+  }
   &-deco {
     font-family: $heading-font;
     font-size: 30px;
@@ -15,6 +18,12 @@
   &-color {
     &-black {
       color: $black;
+    }
+    &-blue {
+      color: $sky;
+    }
+    &-grey {
+      color: #333;
     }
   }
 }

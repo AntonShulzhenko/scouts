@@ -1,1 +1,1 @@
-//=require 'plugins/banner.js'
+//=require 'modules/*.js'

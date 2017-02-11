@@ -1,0 +1,38 @@
+doctype
+html
+  -var title = 'Фотогалерея';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content
+        header.content__header.content__header_blue
+          .breadcrumbs
+            a.breadcrumbs__item(href="#")
+              i.fa.fa-home(aria-hidden="true")
+            a.breadcrumbs__item(href="#") Фотогалерея
+            
+          .content__heading
+            h1.content__h1 Фотогалерея
+              
+        .content__container
+          .gallery
+            -var gallery = [{'src': 'f-1.jpg', 'link': 'Лагеря', 'pics': '116'}, {'src': 'f-2.jpg', 'link': 'Родители', 'pics': '15'}, {'src': 'f-3.jpg', 'link': 'Лидеры', 'pics': '26'}, {'src': 'f-4.jpg', 'link': 'Масленица', 'pics': '22'}, {'src': 'f-5.jpg', 'link': 'Норвегия 2005', 'pics': '151'}, {'src': 'f-6.jpg', 'link': 'Походы', 'pics': '87'}, {'src': 'f-7.jpg', 'link': 'Подснежник-2010', 'pics': '46'}, {'src': 'f-8.jpg', 'link': 'Праздник', 'pics': '5'}, {'src': 'f-9.jpg', 'link': 'Волчата', 'pics': '65'}, {'src': 'f-10.jpg', 'link': 'Сбор патрулей', 'pics': '35'}];
+            
+            each item in gallery
+              .gallery__item.text-center
+                .gallery__img
+                  figure.figure
+                    img(src="img/#{item.src}", alt="")
+                    
+                a.gallery__link(href="#") #{item.link}
+                p.gallery__data
+                  i.fa.fa-picture-o(aria-hidden="true")
+                  span #{item.pics} 
+                  | фотографий
+            
+      include templates/banner
+      
+    include templates/footer
+  

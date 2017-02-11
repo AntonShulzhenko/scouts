@@ -44,6 +44,8 @@
   }
   &__container {
     padding: 54px 60px;
+    position: relative;
+    z-index: 3;
   }
   &__header {
     padding: 30px 50px 10px;

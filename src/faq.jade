@@ -1,0 +1,34 @@
+doctype
+html
+  -var title = 'Вопрос ответ';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content
+        header.content__header.content__header_grey
+          .breadcrumbs
+            a.breadcrumbs__item(href="#")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Вопрос ответ
+          
+          .content__heading
+            h1.content__h1 Вопрос ответ
+              
+        .content__container.content__container_faq
+          .container-fluid
+            h2 Ответы на самые популярные вопросы br о ассоциации
+              
+            .row
+              .col-xs-4
+                
+                
+              .col-xs-8
+                
+                    
+      include templates/banner
+      
+    include templates/footer
+  

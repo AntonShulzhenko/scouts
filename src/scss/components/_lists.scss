@@ -30,6 +30,7 @@
     &_deco {
       li {
         font-size: 24px;
+        font-weight: 500;
         line-height: 25px;
         color: $white;
         padding-top: 10px;
@@ -61,6 +62,16 @@
           z-index: -1;
         }
       }
+      &-dark {
+        li {
+          margin-bottom: 80px;
+          padding-left: 60px;
+          color: $black;
+          &::after {
+            background-color: $white;
+          }
+        }
+      }
     }
   }
   &-unordered {
@@ -68,11 +79,51 @@
       font-size: 18px;
       line-height: 30px;
       margin-bottom: 15px;
-      &::before {
-        content: "\f058";
-        font-family: $fa;
-        color: $sky;
-        margin-right: 20px;
+    }
+    &_check {
+      li {
+        &::before {
+          content: "\f058";
+          font-family: $fa;
+          color: $sky;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &_anchors {
+    max-width: 210px;
+    li {
+      margin-bottom: 30px;
+      a {
+        font-size: 24px;
+        line-height: 30px;
+        color: $black;
+        border-bottom: 2px dashed #bec0c0;
+        position: relative;
+        @include defaultTrans();
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          border-bottom: 2px dashed transparent;
+          color: $sky;
+        }
+      }
+      i {
+        font-size: 36px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        @include defaultTrans();
+      }
+      &:hover,
+      &:focus {
+        i {
+          color: $sky;
+          opacity: 1;
+          transform: translateX(45px);
+        }
       }
     }
   }

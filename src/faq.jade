@@ -23,7 +23,26 @@ html
               
             .row
               .col-xs-4
-                
+                .faq-form
+                  p.text-medium.margin-bottom-20 Если вы не нашли ответ на свой вопрос, обратитесь к нашим менеджерам:
+                  
+                  p по телефону
+                  
+                  p.faq-form__tel +380 (44) 55588899
+                  
+                  p или заполните форму
+                  
+                  form.form.form_faq.text-center
+                    .form-group
+                      input(type="text", name="name", placeholder="Имя")
+                      
+                    .form-group
+                      input(type="tel", name="tel", placeholder="Номер телефона")
+                      
+                    .form-group
+                      textarea(name="textarea", placeholder="Текст вопроса")
+                      
+                    button.button.button_yellow(type="submit") отправить вопрос
                 
               .col-xs-8
                 

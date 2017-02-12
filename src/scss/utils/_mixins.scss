@@ -4,3 +4,25 @@
 @mixin defaultTrans() {
   transition: all $td $tf;
 }
+@mixin placeholder($color, $fsz) {
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-size: $fsz;
+    font-weight: 300;
+  }
+  ::-moz-placeholder {
+    color: $color;
+    font-size: $fsz;
+    font-weight: 300;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+    font-size: $fsz;
+    font-weight: 300;
+  }
+  :-moz-placeholder {
+    color: $color;
+    font-size: $fsz;
+    font-weight: 300;
+  }
+}

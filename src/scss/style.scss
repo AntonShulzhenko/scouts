@@ -33,9 +33,12 @@
 @import "components/pagination";
 @import "components/gallery";
 @import "components/form";
+@import "components/accordion";
 
 @import "pages/index/section-news";
 @import "pages/index/section-how";
 @import "pages/index/section-liders";
 @import "pages/index/section-parents";
 @import "pages/index/section-sponsors";
+
+@import "pages/faq/faq-form";

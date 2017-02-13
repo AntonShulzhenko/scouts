@@ -1,0 +1,68 @@
+doctype
+html
+  -var title = 'Спонсоры';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content.content_no-bg
+        header.content__header.content__header_blue
+          .breadcrumbs
+            a.breadcrumbs__item(href="#")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Спонсоры
+          
+          .content__heading
+            h1.content__h1 Спонсоры
+            p.content__descr
+              | Информация о людях и компаниях, 
+              br
+              | поддерживающих скаутское движение
+              
+        .content__container.content__container_sponsors
+          .container-fluid.margin-bottom-40
+            -var sponsors = [{'img': 's-1.jpg', 'name': 'Название компании спонсора'}, {'img': 's-2.jpg', 'name': 'Название компании спонсора'}, {'img': 's-3.jpg', 'name': 'Название компании спонсора'}, {'img': 's-4.jpg', 'name': 'Название компании спонсора'}, {'img': 's-2.jpg', 'name': 'Название компании спонсора'}, {'img': 's-3.jpg', 'name': 'Название компании спонсора'}, {'img': 's-4.jpg', 'name': 'Название компании спонсора'}, {'img': 's-2.jpg', 'name': 'Название компании спонсора'}];
+            .sponsors.owl-carousel
+              each item in sponsors
+                .sponsors__item.text-center
+                  img(src="img/#{item.img}", alt="")
+                  p.sponsors__name #{item.name}
+                  
+        .content__container.bg-blue
+          .max-width-980.margin-auto
+            .container-fluid
+              h2.margin-bottom-40.margin-top-50.text-color-white Текст о спонсортстве
+              
+              .row.margin-bottom-80
+                .col-xs-6
+                  p.text-color-white Родители часто задаются вопросом «Кто такие скауты?». Скаутинг – это система всестороннего развития детей, где их учат разводить костры, строить шалаши, выживать в дикой природе, фильтровать воду, ориентироваться на местности по звездам, по компасу,  по солнцу, по мху, – по чему угодно. Кроме того, помимо туризма и выживания
+                  
+                .col-xs-6
+                  p.text-color-white Существует скаутский закон, который включает 10 пунктов: скаут честный, скаут вежливый, скаут друг всем и брат каждому скауту, скаут подчиняется своему скаут-лидеру и слушается родителей, скаут экономен и бережлив, скаут друг природы и так далее. Также скаутинг включает патриотическое воспитание
+        
+        .content__container.section_yellow
+          .container-fluid
+            h2.text-color-white.margin-bottom-40.text-center 
+              | Хотите стать спонсором 
+              br
+              | ассоциации скаутов?
+          
+            p.text-center Заполните форму ниже, оставьте свои данные и мы свяжемся с вами
+            
+            form.form.form_inline.form_sponsors(action="")
+              .form-group
+                input.input(type="text", placeholder="имя")
+                  
+              .form-group
+                input.input(type="tel", placeholder="номер телефона")
+                  
+              .form-group
+                button.button.button_white(type="submit") Отправить
+            
+            p.text-center.text-24.text-bold или отправьте заявку на электронный адрес 
+              a.mail-link(href="mailto:adsskif@mail.ru") adsskif@mail.ru
+      
+    include templates/footer
+  

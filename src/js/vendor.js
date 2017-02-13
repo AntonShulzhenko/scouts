@@ -2,3 +2,4 @@
 //=require 'bootstrap-sass/assets/javascripts/bootstrap.min.js'
 //=require 'gsap/src/minified/TweenMax.min.js'
 //=require 'libs/owl.carousel.min.js'
+//=require 'libs\jquery.maskedinput.min.js'

@@ -1,6 +1,6 @@
 (function($) {
-  $('.owl-carousel.banner').owlCarousel({
-    items: 1,
+  $('.sponsors.owl-carousel').owlCarousel({
+    items: 5,
     nav: true,
     navText: ['', '']
   });

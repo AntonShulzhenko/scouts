@@ -1,6 +1,6 @@
 (function($) {
-  $('.owl-carousel.banner').owlCarousel({
-    items: 1,
+  $('.leaders_carousel.owl-carousel').owlCarousel({
+    items: 2,
     nav: true,
     navText: ['', '']
   });

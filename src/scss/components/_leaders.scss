@@ -30,4 +30,49 @@
     margin-left: -25px;
     z-index: 2;
   }
+  &_carousel {
+    .owl-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      .owl-prev,
+      .owl-next {
+        display: block;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: {
+          color: $dark-violet;
+          image: url(../img/banner-navs.png);
+          repeat: no-repeat;
+        }
+        opacity: 1;
+        transition: all $td $tf;
+        &.disabled {
+          opacity: 0;
+        }
+      }
+      .owl-prev {
+        margin-left: -50px;
+        box-shadow: 5px 0 0 0 $sky;
+        background-position: 13px center;
+        &:hover {
+          transform: translateX(-5px);
+        }
+      }
+      .owl-next {
+        margin-right: -50px;
+        box-shadow: -5px 0 0 0 $sky;
+        background-position: right 13px center;
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
 }

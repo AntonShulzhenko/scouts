@@ -1,0 +1,71 @@
+doctype
+html
+  -var title = 'Контакты';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content.content_bg-mountains
+        header.content__header.content__header_grey
+          .breadcrumbs
+            a.breadcrumbs__item(href="#")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Контакты
+          
+          .content__heading
+            h1.content__h1 Контакты
+            
+        .map
+          .map__container#map
+            
+          .map__info.contacts-info
+            .contacts-info__item.contacts-info__item_post
+              p.text-bold Почтовый адрес:
+              p
+                | 49101, Украина,
+                br
+                | г. Днепропетровск,
+                br 
+                | пр. Кирова, д. 10/12, к. 30
+                
+            .contacts-info__item.contacts-info__item_address
+              p.text-bold Фактический адрес:
+              p
+                | 49101, Украина,
+                br
+                | г. Днепропетровск, ул. Артема 1й (Скаутский центр "СКИФ").
+                
+            .contacts-info__item.contacts-info__item_email
+              p.text-bold Электронный адрес:
+              p adsskif@mail.ru
+        
+        .content__container
+          .container-fluid
+            h2.margin-bottom-20.text-center Напишите нам
+          
+            p.text-center Заполните форму ниже, оставьте свои данные и мы свяжемся с вами
+            
+            form.form.form_inline.form_orange.form_contacts(action="")
+              .form-group
+                input.input(type="text", placeholder="имя", name="name")
+                  
+              .form-group
+                input.input(type="tel", placeholder="номер телефона", name="tel")
+                  
+              .form-group
+                input.input(type="email", placeholder="e-mail", name="email")
+                  
+              .form-group.form-group_textarea
+                textarea.textarea(name="textarea")
+
+              button.button.button_white.margin-auto(type="submit") Отправить
+            
+            p.text-center.text-24.text-bold или отправьте заявку на электронный адрес 
+              a.mail-link(href="mailto:adsskif@mail.ru") adsskif@mail.ru
+              
+      include templates/banner
+      
+    include templates/footer
+  

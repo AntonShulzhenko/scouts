@@ -17,13 +17,6 @@ const imagemin     = require('gulp-imagemin');
 const min          = require('gulp-clean-css');
 const jade         = require('gulp-jade');
 
-// const concat       = require('gulp-concat'); Handlebars
-// const handlebars   = require('gulp-handlebars'); Handlebars
-// const wrap         = require('gulp-wrap'); Handlebars
-// const declare      = require('gulp-declare'); Handlebars
-// const merge        = require('merge-stream'); Handlebars
-// const uglify       = require('gulp-uglify'); Minify js
-
 const errorHandler = (title) => plumber(
   title = 'Error',
   {
@@ -72,8 +65,6 @@ gulp.task('styles', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/css'))
-    .pipe(min())
     .pipe(gulp.dest('public/css'));
 });
 
@@ -124,49 +115,6 @@ gulp.task('lint', () => {
 });
 
 
-// gulp.task('templates', () => {
-//   const hbs = require('handlebars');
-//
-//   const partials = gulp
-//     .src('src/templates/**/_*.hbs')
-//     .pipe(errorHandler())
-//     .pipe(handlebars({
-//       handlebars: hbs
-//     }))
-//     .pipe(wrap('Handlebars.registerPartial(<%= partName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
-//       imports: {
-//         partName(fileName) {
-//           return JSON.stringify(path.basename(fileName, '.js').substr(1));
-//         }
-//       }
-//     }));
-//
-//
-//   const templates = gulp
-//     .src('src/templates/**/[^_]*.hbs')
-//     .pipe(errorHandler())
-//     .pipe(handlebars({
-//       handlebars: hbs
-//     }))
-//     .pipe(wrap('Handlebars.template(<%= contents %>)'))
-//     .pipe(declare({
-//       namespace: 'templates',
-//       noRedeclare: true
-//     }));
-//
-//   return merge(partials, templates)
-//     .pipe(concat('templates.js'))
-//     .pipe(gulp.dest('public/js'));
-// });
-
-gulp.task('static:html', () => {
-  return gulp
-    .src('src/index.html')
-    .pipe(errorHandler())
-    .pipe(gulp.dest('public'));
-});
-
-
 gulp.task('static:fonts', () => {
   return gulp
     .src([
@@ -190,7 +138,7 @@ gulp.task('static:images', () => {
 });
 
 
-gulp.task('static', ['static:html', 'static:fonts', 'static:images'], () => {
+gulp.task('static', ['static:fonts', 'static:images'], () => {
   return gulp
     .src([
       'src/*.png', 'src/*.svg', 'src/*.json', 'src/*.xml'
@@ -225,7 +173,6 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch(['src/js/**/*.js', '!src/js/vendor.js'], ['scripts:main', 'lint']);
   gulp.watch('!src/js/vendor.js', ['scripts:vendor']);
-  gulp.watch('src/index.html', ['static:html']);
   gulp.watch('src/**/*.jade', ['jade']);
 });
 

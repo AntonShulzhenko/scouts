@@ -48,6 +48,17 @@
       display: none;
     }
   }
+  &_bg-mountains {
+    padding-bottom: 30px;
+    background: {
+      image: url(../img/mountains-bg-grey.png);
+      position: right 70px bottom;
+      repeat: no-repeat;
+    }
+    &::after {
+      display: none;
+    }
+  }
   &__container {
     padding: 54px 60px;
     position: relative;

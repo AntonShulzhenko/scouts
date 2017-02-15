@@ -1,0 +1,53 @@
+.library {
+  padding-top: 80px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__poster {
+    width: 200px;
+    height: 300px;
+    margin-right: 35px;
+    overflow: hidden;
+  }
+  &__data {
+    width: calc(100% - 235px);
+  }
+  &__heading {
+    font-family: $content-font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $sky;
+    &:hover,
+    &:focus {
+      color: $sky;
+      text-decoration: underline;
+    }
+  }
+  &__link-info {
+    font-size: 12px;
+    line-height: 24px;
+    i {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+  &__excerpt {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 30px;
+  }
+  .content__container {
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}

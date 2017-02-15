@@ -1,0 +1,138 @@
+doctype
+html
+  -var title = 'Библиотека';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content
+        header.content__header.content__header_blue
+          .breadcrumbs
+            a.breadcrumbs__item(href="/")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Библиотека
+          
+          .content__heading
+            h1.content__h1 Библиотека
+            p.content__descr полезные ссылки и материалы для скаутов  организации
+        
+        .library
+          .content__container
+            .container-fluid
+              .row
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l1.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название файла, который можно скачать
+                      a.library__link(href="#") Ссылка на скачивание
+                      p.library__link-info (
+                        i.fa.fa-file-pdf-o(aria-hidden="true") 
+                        | pdf, 
+                        span.library__file-size 15 MB
+                        | )
+                      p.library__excerpt Родители не узнают своих детей, вернувшихся из лагеря: они повзрослели, окрепли. Может, у них пропали пухлые щечки и стали более решительными движения, но родители сами разрешили ребенку сделать этот выбор - стать скаутом.
+                      
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l2.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название файла, который можно скачать
+                      a.library__link(href="#") Ссылка на скачивание
+                      p.library__link-info (
+                        i.fa.fa-file-pdf-o(aria-hidden="true") 
+                        | pdf, 
+                        span.library__file-size 15 MB
+                        | )
+                      p.library__excerpt Родители не узнают своих детей, вернувшихся из лагеря: они повзрослели, окрепли. Может, у них пропали пухлые щечки и стали более решительными движения, но родители сами разрешили ребенку сделать этот выбор - стать скаутом.
+              
+          .content__container
+            .container-fluid  
+              .row
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l3.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название сайта или страницы, на который будет идти ссылка
+                      a.library__link(href="#") http://site.com
+                      p.library__excerpt Родители не узнают своих детей, вернувшихся из лагеря: они повзрослели, окрепли. Может, у них пропали пухлые щечки и стали более решительными движения, но родители сами разрешили ребенку сделать этот выбор - стать скаутом.
+                      
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l4.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название сайта или страницы, на который будет идти ссылка и по которому нету описания
+                      a.library__link(href="#") http://site.com
+                    
+          .content__container
+            .container-fluid    
+              .row
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l1.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название файла, который можно скачать
+                      a.library__link(href="#") Ссылка на скачивание
+                      p.library__link-info (
+                        i.fa.fa-file-pdf-o(aria-hidden="true") 
+                        | pdf, 
+                        span.library__file-size 15 MB
+                        | )
+                      p.library__excerpt Родители не узнают своих детей, вернувшихся из лагеря: они повзрослели, окрепли. Может, у них пропали пухлые щечки и стали более решительными движения, но родители сами разрешили ребенку сделать этот выбор - стать скаутом.
+                      
+                .col-xs-6
+                  .library__item
+                    .library__poster
+                      img(src="img/l2.jpg", alt="")
+                    
+                    .library__data
+                      h3.library__heading Название файла, который можно скачать
+                      a.library__link(href="#") Ссылка на скачивание
+                      p.library__link-info (
+                        i.fa.fa-file-pdf-o(aria-hidden="true") 
+                        | pdf, 
+                        span.library__file-size 15 MB
+                        | )
+                      p.library__excerpt Родители не узнают своих детей, вернувшихся из лагеря: они повзрослели, окрепли. Может, у них пропали пухлые щечки и стали более решительными движения, но родители сами разрешили ребенку сделать этот выбор - стать скаутом.
+                
+          .pagination
+            .pagination__top
+              .pagination__pages
+                span.current 2
+                span /
+                span.amount 4
+                span.page Страница
+                
+            .pagination__bottom
+              a.pagination__link(href="#") Первая
+              a.pagination__link(href="#") Предыдущая
+              
+              ul.pagination__list
+                li
+                  a(href="#") 1
+                li
+                  a(href="#") 2
+                li
+                  a.active(href="#") 3
+                li
+                  a(href="#") 4
+              
+              a.pagination__link(href="#") Следующая
+              a.pagination__link(href="#") Последняя
+              
+      include templates/banner
+      
+    include templates/footer
+  

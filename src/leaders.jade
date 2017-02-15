@@ -1,0 +1,66 @@
+doctype
+html
+  -var title = 'Наши лидеры';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content
+        header.content__header.content__header_yellow
+          .breadcrumbs
+            a.breadcrumbs__item(href="/")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Наши лидеры
+          
+          .content__heading
+            h1.content__h1 Наши лидеры
+
+        .content__container.content__container_leaders.section_yellow
+          .container-fluid
+            .leaders.leaders_carousel.owl-carousel
+              .leaders__item
+                figure.figure.figure_rect.leaders__figure
+                  img(src="img/lid-1.jpg", alt="")
+                  
+                .leaders__content
+                  p.leaders__name Константин Константиновский
+                  p.leaders__descr С нами уже 5 лет
+                  p.leaders__descr Главный лидер в Днепре
+                  
+              .leaders__item
+                figure.figure.figure_rect.leaders__figure
+                  img(src="img/lid-2.jpg", alt="")
+                  
+                .leaders__content
+                  p.leaders__name Константин Константиновский
+                  p.leaders__descr С нами уже 5 лет
+                  p.leaders__descr Главный лидер в Днепре
+                  
+              .leaders__item
+                figure.figure.figure_rect.leaders__figure
+                  img(src="img/lid-2.jpg", alt="")
+                  
+                .leaders__content
+                  p.leaders__name Константин Константиновский
+                  p.leaders__descr С нами уже 5 лет
+                  p.leaders__descr Главный лидер в Днепре
+
+        .content__container.content__container_leaders
+          .container-fluid
+            .leaders.leaders_list
+              -var leadersList = [{'img': 'lid-1.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}, {'img': 'lid-2.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}, {'img': 'lid-3.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}, {'img': 'lid-1.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}, {'img': 'lid-2.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}, {'img': 'lid-3.jpg', 'name': 'Константин Константиновский', 'exc': 'Областная детская общественная организация приглашает Вас принять участие в международном скаутском лагере в Норвегии'}];
+              each lead in leadersList
+                .leaders__item
+                  figure.figure.figure_rect.leaders__figure
+                    img(src="img/#{lead.img}", alt="")
+                    
+                  .leaders__content
+                    a.leaders__link(href="#") #{lead.name}
+                    p.leaders__excerpt #{lead.exc}
+              
+      include templates/banner
+      
+    include templates/footer
+  

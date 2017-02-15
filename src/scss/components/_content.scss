@@ -77,6 +77,9 @@
     &_sponsors {
       padding-top: 130px;
     }
+    &_leaders {
+      padding: 140px 120px;
+    }
   }
   &__header {
     padding: 30px 50px 10px;
@@ -120,6 +123,22 @@
         background: {
           image: url(../img/ch-grey.png);
         }
+      }
+    }
+    &_yellow {
+      background-color: $yel;
+      border-radius: 8px;
+      &::after {
+        background: none;
+      }
+      .content__h1 {
+        color: $white;
+      }
+      .content__descr {
+        color: $white;
+      }
+      .breadcrumbs__item {
+        color: $white;
       }
     }
   }

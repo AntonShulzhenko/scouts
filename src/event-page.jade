@@ -1,0 +1,76 @@
+doctype
+html
+  -var title = 'Еще одно событие, которое может быть с длинным названием в несколько строчек';
+  include templates/head
+  body
+    .wrap
+      include templates/header
+      
+      .content
+        header.content__header.content__header_blue
+          .breadcrumbs
+            a.breadcrumbs__item(href="#")
+              i.fa.fa-home(aria-hidden="true")
+              
+            a.breadcrumbs__item(href="#") Новости
+            a.breadcrumbs__item(href="#") Еще одно событие, которое может быть с длинным названием в несколько строчек
+          
+          .content__heading
+            h1.content__h1 Еще одно событие, которое может быть с длинным названием в несколько строчек
+            
+        .content__container.content__container_page
+          .container-fluid
+            .event-announcement
+              .event-announcement__item
+                figure
+                  img.img-responsive(src="img/n1.jpg", alt="")
+                    
+              .event-announcement__item
+                .data.event-announcement__data
+                  .data__item
+                    p.data__p Дата проведения
+                    p.data__p.data__p_calendar Каждую среду
+                    
+                  .data__item
+                    p.data__p Ближайшие
+                    p.data__p.data__p_calendar 24 декабря 2016
+                
+                p.event-announcement__excerpt Дорогие наши старшие скауты, роверы и друзья организации - Вот и настало время, долгожданного традиционного лагеря нашей организации - «Джерело». Приглашаем всех желающих - весь старший актив организации
+                
+              .event-announcement__item
+                p.lead Спосоры
+                .sponsors
+                  img(src="img/s-1.jpg", alt="")
+                  img(src="img/s-3.jpg", alt="")
+          
+          .row
+            .col-xs-6
+              p.lead Описание события
+              
+              p Дорогие наши старшие скауты, роверы и друзья организации - Вот и настало время, долгожданного традиционного лагеря нашей организации - «Джерело».
+                
+              p Приглашаем всех желающих - весь старший актив организации, просто небезразличных граждан нашего славного города, и конечно же уважаемых и не менее активным родителей наших волчат и скаутов, принять участие в программе проекта - по подготовке и обустройству территории места проведения  традиционного 16-го скаутского лагеря «Джерело 2010».
+                
+              p Родители часто задаются вопросом «Кто такие скауты?». Скаутинг – это система всестороннего развития детей, где их учат разводить костры, строить шалаши, выживать в дикой природе, фильтровать воду, ориентироваться на местности по звездам, по компасу,  по солнцу, по мху, – по чему угодно. Кроме того, помимо туризма и выживания юные скауты развиваются духовно (только не в религиозном плане, а с точки зрения этики и морали).
+                
+            .col-xs-6
+              p.lead.margin-left-70 Фотографии
+              
+              .photo-block.margin-left-70
+                a(href="#")
+                  img(src="img/pb1.jpg", alt="")
+                a(href="#")
+                  img(src="img/pb2.jpg", alt="")
+                a(href="#")
+                  img(src="img/pb1.jpg", alt="")
+                a(href="#")
+                  img(src="img/pb2.jpg", alt="")
+                a(href="#")
+                  img(src="img/pb1.jpg", alt="")
+                a(href="#")
+                  img(src="img/pb2.jpg", alt="")
+              
+      include templates/banner
+      
+    include templates/footer
+  

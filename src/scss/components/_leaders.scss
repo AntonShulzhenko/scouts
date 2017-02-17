@@ -109,6 +109,9 @@
       font-weight: 400;
       line-height: 20px;
       color: $black;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

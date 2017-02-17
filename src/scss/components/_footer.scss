@@ -6,6 +6,27 @@
     repeat: no-repeat;
     position: right bottom -35px;
   }
+  position: relative;
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 580px;
+    height: 33px;
+    background: {
+      image: url(../img/path.png);
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+    position: absolute;
+    left: 14%;
+    top: 50px;
+    z-index: 0;
+  }
   &__copy {
     text-align: center;
     p {

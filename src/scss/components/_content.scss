@@ -80,6 +80,66 @@
     &_leaders {
       padding: 140px 120px;
     }
+    &_page {
+      padding-top: 120px;
+      figure {
+        position: relative;
+        overflow: hidden;
+        padding: 0 10px 10px 0;
+        &::before {
+          content: "";
+          display: block;
+          background-color: $yel;
+          width: 100%;
+          height: calc(100% + 10px);
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 0;
+        }
+        img {
+          width: 100%;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      .lead {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 48px;
+        color: $link;
+      }
+      .photo-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 520px;
+        a {
+          display: block;
+          width: 250px;
+          height: 250px;
+          margin-bottom: 20px;
+          overflow: hidden;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($sky, 0.25);
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
   }
   &__header {
     padding: 30px 50px 10px;
@@ -115,6 +175,11 @@
       }
       .breadcrumbs__item {
         color: $white;
+        &:hover,
+        &:focus {
+          color: $white;
+          text-decoration: none;
+        }
       }
     }
     &_grey {

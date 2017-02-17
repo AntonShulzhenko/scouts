@@ -27,4 +27,23 @@
       }
     }
   }
+  &__more {
+    font-weight: 700;
+    font-size: 14px;
+    color: $black;
+    @include defaultTrans();
+    &:hover,
+    &:focus {
+      color: $black;
+      .fa {
+        transform: translateX(5px);
+      }
+    }
+    .fa {
+      color: $link;
+      display: inline-block;
+      margin-left: 4px;
+      @include defaultTrans();
+    }
+  }
 }

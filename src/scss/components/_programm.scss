@@ -1,0 +1,26 @@
+.programm {
+  margin-top: 50px;
+  &__heading {
+    font-size: 30px;
+    line-height: 1;
+    color: $sky;
+    margin-bottom: 20px;
+  }
+  &__item {
+    margin-bottom: 30px;
+  }
+  &__date {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__descr {
+    p {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $black;
+      margin-bottom: 0;
+    }
+  }
+}

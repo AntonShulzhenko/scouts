@@ -3,6 +3,9 @@
   textarea {
     outline: none;
     @include defaultTrans();
+    &.error {
+      border: 1px solid red;
+    }
   }
   &_faq {
     input,

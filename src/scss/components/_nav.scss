@@ -14,32 +14,32 @@
   &__item {
     width: 50%;
     margin-bottom: 15px;
-  }
-  &__link {
-    font-size: 16px;
-    font-weight: 400;
-    color: $white;
-    line-height: 1;
-    padding-left: 14px;
-    position: relative;
-    &::before {
-      content: "\f105";
-      display: inline-block;
-      font-family: $fa;
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: all $td $tf;
-    }
-    &:hover {
-      &::before {
-        transform: translateX(8px);
-      }
-    }
-    &:hover,
-    &:focus {
-      text-decoration: none;
+    a {
+      font-size: 16px;
+      font-weight: 400;
       color: $white;
+      line-height: 1;
+      padding-left: 14px;
+      position: relative;
+      &::before {
+        content: "\f105";
+        display: inline-block;
+        font-family: $fa;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all $td $tf;
+      }
+      &:hover {
+        &::before {
+          transform: translateX(8px);
+        }
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $white;
+      }
     }
   }
 }
